@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kartik Chauhan | Security-minded CS student</title>
+<meta name="description" content="Kartik Chauhan: B.Tech CS student at UPES working on Zero Trust IoT security, anomaly detection and full-stack projects.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏔️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--night:#0f1419;--slate:#18212b;--line:#2a3644;--mist:#dbe4ec;--dim:#93a3b3;--moss:#8fbf7a;--sand:#e8d5a3;
+--display:"Bricolage Grotesque",system-ui,sans-serif;--body:"Figtree",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--mist);font:400 1.05rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--moss);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:5;background:rgba(15,20,25,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:22px;align-items:center;height:56px;overflow-x:auto;white-space:nowrap}
+nav b{font:700 1.05rem var(--display);margin-right:auto;color:var(--sand)}
+nav a{text-decoration:none;color:var(--dim);font-size:.95rem}
+nav a:hover{color:var(--moss)}
+.hero{padding:72px 0 56px;display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center}
+.hero h1{font:800 clamp(2.6rem,7vw,5rem)/1 var(--display);letter-spacing:-.03em}
+.hero .role{font:500 1.3rem/1.4 var(--display);color:var(--sand);margin:18px 0 14px}
+.hero p.lead{color:var(--dim);max-width:46ch}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.btn{padding:10px 18px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem;background:var(--slate)}
+.btn:hover{border-color:var(--moss);color:var(--moss)}
+.btn.main{background:var(--moss);color:var(--night);border-color:var(--moss)}
+.btn.main:hover{color:var(--night);filter:brightness(1.08)}
+.photo{position:relative;justify-self:center;width:min(340px,80vw)}
+.photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 45%;border-radius:999px 999px 28px 28px;border:3px solid var(--sand)}
+.chip{position:absolute;left:-18px;bottom:22px;background:var(--slate);border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:.88rem;max-width:210px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.chip b{color:var(--moss);font-weight:600}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font:700 clamp(1.7rem,4vw,2.3rem)/1.15 var(--display);letter-spacing:-.02em;margin-bottom:8px}
+.sub{color:var(--dim);margin-bottom:30px;max-width:60ch}
+h3{font:700 1.2rem/1.3 var(--display)}
+.when{color:var(--dim);font-size:.92rem}
+.tl{border-left:2px solid var(--line);padding-left:24px;display:grid;gap:30px}
+.tl article{position:relative}
+.tl article::before{content:"";position:absolute;left:-31px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--moss)}
+.tl ul{margin:10px 0 0 18px;color:#c3cfda}
+.tl li{margin-bottom:5px}
+.projects{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.card{background:var(--slate);border:1px solid var(--line);border-radius:18px;padding:24px;grid-column:span 3;display:flex;flex-direction:column;gap:10px}
+.card.big{grid-column:span 6;border-color:#3b5a3a;background:linear-gradient(135deg,#18212b,#1b2a24)}
+.card.third{grid-column:span 2}
+.card p{color:#c3cfda;font-size:.98rem}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
+.tags span{font-size:.8rem;padding:2px 10px;border:1px solid var(--line);border-radius:999px;color:var(--dim)}
+.status{font-size:.82rem;color:var(--sand)}
+.card a.go{font-weight:600;color:var(--moss);text-decoration:none}
+.card a.go:hover{text-decoration:underline}
+.paper{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.paper blockquote{border-left:3px solid var(--sand);padding-left:18px;color:#c3cfda}
+.note{font-size:.9rem;color:var(--dim);margin-top:12px}
+.cal{background:var(--sand);border-radius:18px;padding:18px;overflow-x:auto}
+.cal img{display:block;min-width:720px;width:100%}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.skills div{background:var(--slate);border:1px solid var(--line);border-radius:16px;padding:20px}
+.skills h3{font-size:1.02rem;color:var(--sand);margin-bottom:8px}
+.skills p{color:#c3cfda;font-size:.95rem}
+.certs{display:grid;gap:14px}
+.certs div{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid var(--line)}
+.certs b{font-weight:600}
+.fun{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.fun div{background:var(--slate);border:1px solid var(--line);border-radius:18px;padding:22px}
+.fun .t{font:700 1.05rem var(--display);color:var(--moss);margin-bottom:4px}
+.fun p{color:#c3cfda;font-size:.96rem}
+footer{border-top:1px solid var(--line);padding:36px 0 60px;color:var(--dim);text-align:center}
+@media(max-width:820px){.hero{grid-template-columns:1fr;padding-top:40px}.photo{order:-1}.chip{left:8px}.paper{grid-template-columns:1fr}.card,.card.third{grid-column:span 6}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>Kartik Chauhan</b>
+<a href="#projects">Projects</a><a href="#research">Research</a><a href="#experience">Experience</a><a href="#opensource">Open source</a><a href="#skills">Skills</a><a href="#certs">Certificates</a><a href="#beyond">Beyond code</a></div></nav>
+
+<main class="wrap">
+<header class="hero">
+  <div>
+    <h1>Kartik Chauhan</h1>
+    <p class="role">Computer science student building secure systems, from IoT defenses to anomaly detection.</p>
+    <p class="lead">I'm a B.Tech student at UPES, Dehradun. I like projects where security is part of the design from day one, and I ship them end to end: models, APIs and dashboards.</p>
+    <div class="links">
+      <a class="btn main" href="mailto:Chauhan.kartik.ddn@gmail.com">Email me</a>
+      <a class="btn" href="https://github.com/KartikChauhan1">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/kartik-chauhan-a4795b284/">LinkedIn</a>
+      <a class="btn" href="https://leetcode.com/u/koderkartik/">LeetCode</a>
+    </div>
+  </div>
+  <div class="photo">
+    <img src="profile.jpg" alt="Kartik Chauhan smiling on a rocky riverbed, petting a dog" width="340" height="425">
+    <div class="chip"><b>Now building:</b> SwasthyaSetu, an offline-first rural health tool</div>
+  </div>
+</header>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <p class="sub">Security, machine learning and full-stack work. Each one solves a specific problem.</p>
+  <div class="projects">
+    <div class="card big">
+      <h3>Sentinel: Zero Trust IoT Security System</h3>
+      <p>No device is trusted by default. Every request is checked by JWT and device status before access, and an Isolation Forest model flags odd behavior so a device that misbehaves three times in a row gets blocked automatically. Includes Flask REST APIs, a live dashboard for managing devices, and a simulator that mimics real IoT hardware. The research paper below describes it.</p>
+      <div class="tags"><span>Flask</span><span>JWT</span><span>Isolation Forest</span><span>JavaScript dashboard</span></div>
+      <a class="go" href="https://github.com/KartikChauhan1/sentinel-zero-trust-iot">View on GitHub</a>
+    </div>
+    <div class="card">
+      <h3>UEBA Real-Time Anomaly Detection</h3>
+      <p>Finds insider threats from user behavior. Raw logs become per-user features, then a 0 to 100 risk score ranked on a Streamlit dashboard. A Windows Event Log collector feeds it. On a synthetic set of 652 records, it flagged all 6 planted suspicious users.</p>
+      <div class="tags"><span>Python</span><span>scikit-learn</span><span>pandas</span><span>Streamlit</span></div>
+      <a class="go" href="https://github.com/KartikChauhan1/ueba-anomaly-detection">View on GitHub</a>
+    </div>
+    <div class="card">
+      <h3>Geomagnetic Bulletin Automation Suite</h3>
+      <p>Built at Survey of India: scientists were writing monthly magnetic field reports by hand. This desktop app reads raw sensor files, builds the bulletin and graphs automatically, and matched official reports at 94 to 95% accuracy.</p>
+      <div class="tags"><span>Python</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Tkinter</span></div>
+      <a class="go" href="https://github.com/KartikChauhan1/survey-of-india-sab-report-generator">View on GitHub</a>
+    </div>
+    <div class="card third">
+      <h3>SwasthyaSetu</h3>
+      <span class="status">In development</span>
+      <p>An offline-first health decision-support prototype for rural users and ASHA workers. Triage uses deterministic rules, never an LLM, so it runs on a phone without internet. IVR, full offline mode and card data extraction are still to come. Not clinically validated.</p>
+      <div class="tags"><span>TypeScript</span><span>Postgres</span><span>React Native</span></div>
+    </div>
+    <div class="card third">
+      <h3>Jassowala Dham Temple Website</h3>
+      <p>A full-stack site where devotees book pujas, watch live darshan and shop. Security work includes JWT auth, role-based admin endpoints, rate limiting, strict CORS and CSP headers, and server-side price checks against tampering.</p>
+      <div class="tags"><span>React</span><span>FastAPI</span><span>MongoDB</span><span>Razorpay</span></div>
+    </div>
+    <div class="card third">
+      <h3>Problem solving</h3>
+      <p>350+ problems solved, 200+ on LeetCode, across arrays, trees, graphs, DP and sorting. Languages: C++, Java, Python.</p>
+      <div class="tags"><span>DSA</span><span>C++</span><span>Java</span></div>
+      <a class="go" href="https://leetcode.com/u/koderkartik/">LeetCode profile</a>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <h2>Research</h2>
+  <p class="sub">Co-authored manuscript, not yet published.</p>
+  <div class="paper">
+    <div>
+      <h3>Sentinel IoT: AI-Driven Zero Trust Security for Real-Time IoT Threat Detection and Response</h3>
+      <p class="when" style="margin:8px 0 14px">Authors: Pooja Kumari (corresponding), Eshansh Verma, Kartik Chauhan, Aarush Mehrotra, Anant Pundir</p>
+      <div class="tags" style="padding:0"><span>Zero Trust Architecture</span><span>Anomaly Detection</span><span>Isolation Forest</span><span>Microservices Security</span></div>
+    </div>
+    <div>
+      <blockquote>IoT devices are too small to run heavy security software. Sentinel IoT combines Zero Trust access control with an unsupervised model that learns normal device behavior from request rate, packet size, CPU usage and connection time, then blocks devices that repeatedly act abnormally.</blockquote>
+      <p class="note">Evaluated on three simulated device types (thermostat, industrial sensor, camera); attack-mode devices were identified and isolated.</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience and education</h2>
+  <p class="sub">Where I've worked and studied.</p>
+  <div class="tl">
+    <article>
+      <h3>Intern, Geodetic and Research Branch, Survey of India</h3>
+      <div class="when">Dehradun, July 2025. Government of India organization</div>
+      <ul>
+        <li>Built an automated geomagnetic data processing system that cut the manual effort of preparing bulletins.</li>
+        <li>Cleaned and validated raw sensor data from multiple observatory stations so the analysis could be trusted.</li>
+        <li>Delivered every assigned module within the month and received an official internship certificate.</li>
+      </ul>
+    </article>
+    <article>
+      <h3>Social intern, Janki Devi Educational Welfare Society</h3>
+      <div class="when">Dehradun, 1 June to 1 August 2024</div>
+    </article>
+    <article>
+      <h3>B.Tech, Computer Science, UPES Dehradun</h3>
+      <div class="when">July 2023 to present. CGPA 7.54/10</div>
+    </article>
+    <article>
+      <h3>ISC (Class XII) and ICSE (Class X), St. Joseph's Academy, Dehradun</h3>
+      <div class="when">ISC 89.6% (2023). ICSE 90.33% (2021)</div>
+    </article>
+  </div>
+</section>
+
+<section id="opensource">
+  <h2>Open source and activity</h2>
+  <p class="sub">My live GitHub contribution calendar.</p>
+  <div class="cal"><img src="https://ghchart.rshah.org/2f6f3a/KartikChauhan1" alt="GitHub contribution calendar for KartikChauhan1" loading="lazy"></div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <p class="sub">What I work with.</p>
+  <div class="skills">
+    <div><h3>Languages</h3><p>C++, Java, Python, JavaScript, SQL (MySQL)</p></div>
+    <div><h3>Security</h3><p>Zero Trust Architecture, network reconnaissance, vulnerability assessment, Nmap, Wireshark, Netcat, Metasploit (basic)</p></div>
+    <div><h3>Networking</h3><p>TCP/IP, OSI model, firewalls, network traffic analysis, Junos</p></div>
+    <div><h3>Data and ML</h3><p>pandas, NumPy, scikit-learn, Matplotlib, Streamlit</p></div>
+    <div><h3>Web</h3><p>Flask, FastAPI, React, REST APIs, JWT auth</p></div>
+    <div><h3>Tools</h3><p>Kali Linux, Ubuntu, Git. Also learning digital forensics: chain of custody, imaging and hashing.</p></div>
+  </div>
+</section>
+
+<section id="certs">
+  <h2>Certificates and achievements</h2>
+  <p class="sub">Verified credentials and recognitions.</p>
+  <div class="certs">
+    <div><b>JNCIA-Junos, Juniper Networks (HPE Networking Education Services)</b><span class="when">14 September 2026</span></div>
+    <div><b>Smart India Hackathon 2026, Top 50 teams (internal round), UPES</b><span class="when">August to September 2026</span></div>
+    <div><b>Network Defense, Cisco Networking Academy through UPES</b><span class="when">23 May 2026</span></div>
+    <div><b>Internship certificate, Survey of India, Dehradun</b><span class="when">2025</span></div>
+    <div><b>Social internship certificate, Janki Devi Educational Welfare Society</b><span class="when">2024</span></div>
+  </div>
+</section>
+
+<section id="beyond">
+  <h2>Beyond code</h2>
+  <p class="sub">The parts of my résumé that don't fit in a résumé.</p>
+  <div class="fun">
+    <div><div class="t">Editorial board, CSI</div><p>Member in my first year at UPES. I learned to write clearly under deadlines.</p></div>
+    <div><div class="t">Languages</div><p>English and Hindi, fluent in both, including for code comments I later regret.</p></div>
+    <div><div class="t">Trekking</div><p>Chief of mountain trails, and the first to make friends with any stray dog on the route.</p></div>
+    <div><div class="t">Clash Royale</div><p>Strategic Head of Elixir Management. Counts elixir faster than I count my sleep.</p></div>
+    <div><div class="t">FIFA</div><p>Part-time manager, full-time rage-quit survivor. Wins every match in my own head.</p></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Kartik Chauhan. Say hello at <a href="mailto:Chauhan.kartik.ddn@gmail.com">Chauhan.kartik.ddn@gmail.com</a></div></footer>
+</body>
+</html>
