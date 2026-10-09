@@ -32,6 +32,22 @@ nav a:hover{color:var(--moss)}
 .btn:hover{border-color:var(--moss);color:var(--moss)}
 .btn.main{background:var(--moss);color:var(--night);border-color:var(--moss)}
 .btn.main:hover{color:var(--night);filter:brightness(1.08)}
+.resume{position:relative;display:inline-flex;align-items:center;gap:14px;margin-top:24px;padding:7px 24px 7px 7px;border-radius:999px;background:var(--sand);color:var(--night);font:700 1.05rem var(--display);text-decoration:none;overflow:hidden;box-shadow:0 8px 28px rgba(232,213,163,.18);transition:transform .2s,box-shadow .2s}
+.resume:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(232,213,163,.32)}
+.resume:active{transform:translateY(0) scale(.98)}
+.resume .ico{position:relative;width:46px;height:46px;border-radius:50%;background:var(--night);color:var(--sand);display:grid;place-items:center;overflow:hidden;flex:none}
+.resume .ico svg{grid-area:1/1;width:20px;height:20px;transition:transform .4s cubic-bezier(.3,1.4,.5,1)}
+.resume .check{transform:translateY(-180%)}
+.resume.done .arrow{transform:translateY(180%)}
+.resume.done .check{transform:none}
+.resume small{font:600 .72rem var(--body);letter-spacing:.06em;padding:2px 8px;border:1px solid rgba(15,20,25,.35);border-radius:999px}
+.resume::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-20deg);pointer-events:none}
+@media(prefers-reduced-motion:no-preference){
+  .resume::after{animation:shine 4.5s 1.2s infinite}
+  .resume:not(.done):hover .arrow{animation:drop .9s ease-in-out infinite}
+  @keyframes shine{0%,65%{left:-60%}100%{left:130%}}
+  @keyframes drop{0%{transform:translateY(0)}45%{transform:translateY(160%)}46%{transform:translateY(-160%)}100%{transform:translateY(0)}}
+}
 .photo{position:relative;justify-self:center;width:min(340px,80vw)}
 .photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 45%;border-radius:999px 999px 28px 28px;border:3px solid var(--sand)}
 .chip{position:absolute;left:-18px;bottom:22px;background:var(--slate);border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:.88rem;max-width:210px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
@@ -147,6 +163,14 @@ footer{border-top:1px solid var(--line);padding:36px 0 60px;color:var(--dim);tex
     <h1>Kartik Chauhan</h1>
     <p class="role">I solve problems for fun, and I like the ones where security matters.</p>
     <p class="lead">B.Tech CS student at UPES, Dehradun. I love DSA and problem solving, with 350+ problems solved, and I enjoy building secure systems where security is part of the design from day one. I ship them end to end: models, APIs and dashboards.</p>
+    <a class="resume" id="resumeBtn" href="Kartik_Chauhan_Resume.pdf" download="Kartik_Chauhan_Resume.pdf">
+      <span class="ico" aria-hidden="true">
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>
+        <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+      </span>
+      <span class="lbl">Download résumé</span>
+      <small>PDF</small>
+    </a>
     <div class="links">
       <a class="btn main" href="mailto:Chauhan.kartik.ddn@gmail.com">Email me</a>
       <a class="btn" href="https://github.com/KartikChauhan1">GitHub</a>
@@ -388,6 +412,18 @@ footer{border-top:1px solid var(--line);padding:36px 0 60px;color:var(--dim);tex
   });
   setInterval(function(){if(e<MAX){e++;draw();}},1400);
   draw();
+})();
+</script>
+<script>
+(function(){
+  var a=document.getElementById('resumeBtn');
+  if(!a) return;
+  var l=a.querySelector('.lbl');
+  a.addEventListener('click',function(){
+    a.classList.add('done');
+    l.textContent='Downloaded';
+    setTimeout(function(){a.classList.remove('done');l.textContent='Download résumé';},2800);
+  });
 })();
 </script>
 </body>
